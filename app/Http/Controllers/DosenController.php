@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 class DosenController extends Controller
 {
-    // Tampilkan daftar dosen
     public function index()
     {
         $dosens = Dosen::latest()->paginate(10);
@@ -15,13 +14,11 @@ class DosenController extends Controller
         return view('dosen.index', compact('dosens'));
     }
 
-    // Form tambah dosen
     public function create()
     {
         return view('dosen.create');
     }
 
-    // Simpan data dosen baru
     public function store(Request $request)
     {
         $request->validate([
@@ -36,13 +33,11 @@ class DosenController extends Controller
         return redirect()->route('dosen.index')->with('success', 'Data Dosen berhasil ditambahkan!');
     }
 
-    // Form edit dosen
     public function edit(Dosen $dosen)
     {
         return view('dosen.edit', compact('dosen'));
     }
 
-    // Update data dosen
     public function update(Request $request, Dosen $dosen)
     {
         $request->validate([
@@ -57,7 +52,6 @@ class DosenController extends Controller
         return redirect()->route('dosen.index')->with('success', 'Data Dosen berhasil diperbarui!');
     }
 
-    // Hapus dosen
     public function destroy(Dosen $dosen)
     {
         $dosen->delete();

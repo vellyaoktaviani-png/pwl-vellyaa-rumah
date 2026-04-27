@@ -9,7 +9,7 @@ class Dosen extends Model
 {
     use HasFactory;
 
-    // Tambahkan baris ini supaya data bisa diisi lewat Controller
+    
     protected $fillable = [
         'nama_dosen',
         'NIDN',

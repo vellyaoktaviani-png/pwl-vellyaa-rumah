@@ -11,8 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        // Membuat tabel bernama table_mahasiswa [cite: 134]
-        // Membuat tabel bernama table_mahasiswa
+         
         Schema::create('table_mahasiswa', function (Blueprint $table) {
             $table->id();
             $table->string('Fullname');

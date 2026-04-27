@@ -9,7 +9,7 @@ class MataKuliah extends Model
 {
     use HasFactory;
 
-    protected $table = 'mata_kuliahs';
+    protected $table = 'mata_kuliah';
 
     protected $fillable = [
         'kode_mk',
